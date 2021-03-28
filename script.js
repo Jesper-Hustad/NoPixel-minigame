@@ -34,10 +34,10 @@ async function start(){
 
     // reset from previous
     $('.try-again').classList.add('hidden')
-    $('.spy-icon').src = './assets/spy-icon.png'
+    $('.spy-icon').src = 'assets/spy-icon.png'
 
 
-    const dialing = playSound('./assets/dialing.mp3', 0.1)
+    const dialing = playSound('assets/dialing.mp3', 0.1)
 
     // mock loading screen
     setInformationText('ESTABLISHING CONNECTION')
@@ -67,7 +67,7 @@ async function start(){
 
     // display result
     setInformationText((result) ? 'the system has been bypassed.' : "The system didn't accept your answers")
-    if(!result) $('.spy-icon').src = './assets/failed.png'
+    if(!result) $('.spy-icon').src = 'assets/failed.png'
 
     $('.try-again').classList.remove('hidden')
 }
@@ -97,7 +97,7 @@ async function doPuzzle(){
     // ------ Activate puzzle ------
     const progressBar = $('.answer-progress-bar')
     const inputElement = $('.answer-input')
-    const metronome = playSound('./assets/metronome.mp3')
+    const metronome = playSound('assets/metronome.mp3')
     const puzzles = [...Array(4)].map(_ => generateRandomPuzzle())
 
     // clear and focus input window
