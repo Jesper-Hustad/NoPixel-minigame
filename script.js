@@ -210,6 +210,7 @@ const createText = (text, color, size, weight, y) => `
         stroke-width="1" 
         style="font-size:${size}px;" 
         font-weight="${weight}" 
+        font-family: "Arial Black";
         x="50%" 
         y="${y}%" 
         dominant-baseline="middle" 
