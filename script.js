@@ -203,14 +203,14 @@ SHAPE_SVG = {
 
 const createShape = (name, color) => SHAPE_SVG[name](color)
 
-const createText = (text, color, size, weight, y) => `
+const createText = (text, color, size, weight, y, font) => `
     <text 
         stroke="black" 
         fill="${color}" 
         stroke-width="1" 
         style="font-size:${size}px;" 
         font-weight="${weight}" 
-        font-family: "Arial Black";
+        font-family="${font || 'Archivo Black'}, sans-serif";
         x="50%" 
         y="${y}%" 
         dominant-baseline="middle" 
@@ -222,13 +222,15 @@ const createText = (text, color, size, weight, y) => `
 function getPuzzleSvg(puzzleData){
     
     const textSize = 21
-    const textWeigth = 1000
+    const textWeigth = 'normal'
     const textColor = puzzleData.colors['text']
 
     const shapeSVG = createShape(puzzleData.shape, puzzleData.colors['shape'])
     const topText = createText(puzzleData.text[0].toUpperCase(), textColor, textSize, textWeigth, 31)
     const bottomText = createText(puzzleData.text[1].toUpperCase(), textColor, textSize, textWeigth, 67)
-    const numberText = createText(puzzleData.number, puzzleData.colors['number'], 60, 500, 50)
+    const numberText = createText(puzzleData.number, puzzleData.colors['number'], 60, 100, 50, 'Arial, Helvetica')
+
+    console.log(createText(puzzleData.number, puzzleData.colors['number'], 60, 100, 50, 'Arial, Helvetica'))
 
     return createSVG([shapeSVG, topText, bottomText, numberText])
 }
@@ -238,13 +240,13 @@ function getPuzzleSvg(puzzleData){
 
 // ------ Helper functions ------
 
-
 const delay = s => new Promise(res => setTimeout(res, s * 1000));
 const $ = name => document.querySelector(name)
 const randomInt = (max) => Math.floor(Math.random() * Math.floor(max))
 const sample = (arr) => arr[randomInt(arr.length)]
 const shuffleArray = (arr) => arr.map((a) => ({sort: Math.random(), value: a})).sort((a, b) => a.sort - b.sort).map((a) => a.value)
 const setInformationText = (text) => $("#loading-text").innerHTML = `<span class="capital">${text.charAt(0).toUpperCase()}</span>${text.toUpperCase().substring(1)}`
+
 function playSound(name, volume){
     const sound = new Audio(name)
     sound.volume = volume || 0.15;

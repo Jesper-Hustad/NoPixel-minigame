@@ -219,10 +219,13 @@ body, html {
 height: 100%;
 margin: 0;
 padding : 0;
+
+-webkit-font-smoothing: subpixel-antialiased;
+-webkit-text-stroke:1px transparent;
 }
 
 :root{
-  font-family: "Arial Black";
+  font-family: 'Archivo Black', sans-serif;
 
   --primary : #20242E;
   --secondary : #2E4561
