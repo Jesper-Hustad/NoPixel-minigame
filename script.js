@@ -230,8 +230,6 @@ function getPuzzleSvg(puzzleData){
     const bottomText = createText(puzzleData.text[1].toUpperCase(), textColor, textSize, textWeigth, 67)
     const numberText = createText(puzzleData.number, puzzleData.colors['number'], 60, 100, 50, 'Arial, Helvetica')
 
-    console.log(createText(puzzleData.number, puzzleData.colors['number'], 60, 100, 50, 'Arial, Helvetica'))
-
     return createSVG([shapeSVG, topText, bottomText, numberText])
 }
 
