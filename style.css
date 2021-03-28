@@ -1,0 +1,261 @@
+.github-link{
+    position:absolute; 
+    bottom:8px;
+    right: 0px;
+
+    padding: 10px;
+    margin: 15px;
+
+    font-size: small;
+}
+
+.credits{
+    color: gray;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10px;
+
+    position:absolute; 
+    bottom:5px;
+    right: 5px;
+}
+
+.try-again{
+    text-align: center;
+    padding: 20px;
+    margin-top: 37em;
+}
+
+button{
+    background-color: var(--secondary);
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+button:hover{
+    background-color: #243241;
+}
+
+  .answer-input-area{
+    border-bottom: 2px solid rgb(255, 255, 255);
+    border-right: transparent;
+    border-top: transparent;
+    border-left: transparent;
+    background-color: rgba(0, 0, 0, 0);
+    
+  }
+
+  .answer-input-icon{
+    margin: 0;
+    display: inline-block;
+    vertical-align: top;
+
+    width: 18px;
+    padding-top: 4px;
+  }
+
+  .answer-box-description{
+    text-align: left;
+    font-size: 12px;
+    margin-bottom: 5px;
+
+    color: white;
+    font-weight: 100;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .answer-question{
+    text-align: center;
+    margin-top: 170px;
+    color: white;
+  }
+
+  .answer-input{
+    color: white;
+    border: transparent;
+    background-color: rgba(0, 0, 0, 0);
+    padding: 5px;
+
+    padding: 5px;
+
+    display: inline-block;
+    vertical-align: top;
+
+    font-size: 16px;
+    padding-top: 5px;
+    width: 170px;
+    /* text-align: right; */
+    /* float: right; */
+
+    /* spy image */
+    /* background-image: url("https://cdn1.iconfinder.com/data/icons/DarkGlass_Reworked/128x128/actions/emoticon.png");
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-position: 0% 100%; */
+  }
+
+  ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: rgba(214, 215, 235, 0.507);
+}
+
+  .answer-box{
+    margin: auto;
+    width: 210px;
+    margin-top: 65px;
+    /* display: inline-block; */
+    text-align: center;
+  
+  }
+
+  textarea:focus, input:focus{
+    outline: none;
+}
+
+  .answer-countdown{
+
+    margin: 0;
+    position: absolute;
+    top: 70%;
+    left: 3%;
+
+    border: #20242E;
+    width: 94%;
+    height: 4px;
+    background-color: #754E2E;
+  }
+
+  .answer-progress-bar{
+    background-color: #E7A26D;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    /* margin-left: 50%; */
+    transition: width 0ms linear;
+    
+  }
+
+  .answer-progress-bar-shrink{
+    width: 0%;
+    transition: width 6800ms linear;
+  }
+
+  .number-container{
+    display: flex;
+    padding-top: 7rem;
+    
+    padding-left: 40px;
+
+    text-align: center;
+    color: white;
+    
+
+    font-size: 10em;
+    
+    /* position text */
+    line-height: 1.3;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+  
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    /* grid-template-rows: 1fr; */
+    gap: 0px;
+    grid-template-areas:
+      " . . . . ";
+    
+  }
+
+  .can-shrink{
+    transform:scale(1);
+    transition: all 1500ms linear;
+  }
+
+  .number-shrink{
+    transform:scale(0);
+    transition: all 1500ms linear;
+  }
+
+  .square{
+    /* border: solid black; */
+    width: 200px;
+    height: 200px;
+    background-color: var(--secondary);
+
+    padding: 30px;
+    /* margin: 20px; */
+    /* margin: 12px; */
+  }
+
+.hidden{
+  display:none;
+}
+
+  .text-container{
+    width: 100%;
+  }
+
+.loading-text{
+    
+    text-align:center;
+    color: white;
+}
+
+/* .big-numbers{
+  margin-bottom: 100px;
+} */
+
+.spy-icon{
+  display:block;
+    margin:auto;
+    
+}
+
+
+.screen-square{
+  width: 1200px;
+  height: 700px;
+  background-color: var(--primary);
+
+}
+
+.center{
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+body, html {
+height: 100%;
+margin: 0;
+padding : 0;
+}
+
+:root{
+  font-family: "Arial Black";
+
+  --primary : #20242E;
+  --secondary : #2E4561
+}
+
+.capital{
+  font-size: x-large;
+}
+
+.bg {
+background-image: url("background.png");
+height: 100%;
+
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+}
+
+

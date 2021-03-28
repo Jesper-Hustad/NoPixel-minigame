@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hacking minigame</title>
+    <link rel="icon" type="image/png" href="/favicon-32x32.png"/>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+
+
+<body onload="start()">
+    
+    <div class="bg">
+      <div class="center screen-square">
+        
+        <div class="center text-container", id="text-container">
+          <img src="spy-icon.png" class="spy-icon">
+          <h3 class="loading-text" id="loading-text"><span class="capital">E</span>STABLISHING CONNECTION</h3>
+        </div>
+
+        <div class="number-container hidden" id="number-container">
+          <div class="square" id="square-1"></div>
+          <div class="square" id="square-2"></div>
+          <div class="square" id="square-3"></div>
+          <div class="square" id="square-4"></div>
+        </div>
+        
+
+        <div class="answer-section hidden">
+          <div class="answer-countdown">
+            <div class="answer-progress-bar"></div>
+          </div>
+          <div class="answer-question">
+          </div>
+          <div class="answer-box">
+            <div class="answer-box-description">Answer</div>
+            <div class="answer-input-area">
+              <img src="spy-icon.png" class="answer-input-icon">
+              <input class="answer-input" placeholder="blue square">
+            </div>
+            
+          </div>
+        </div>
+        <div class="try-again hidden">
+          <button onclick="start()">Try again?</button>
+        </div>
+
+      </div>
+
+      <button class="github-link" onclick='window.location.href = "https://github.com/Jesper-Hustad/NoPixel-minigame"'>GitHub</button>
+      <div class="credits">Jesper Hustad (aka. Snacksy)</div>
+    </div>
+</body>
+
+
+</html>
