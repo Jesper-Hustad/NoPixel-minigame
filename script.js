@@ -253,6 +253,6 @@ function playSound(name, volume){
 }
 
 window.dataLayer = window.dataLayer || [];
-const gtag = () => dataLayer.push(arguments)
+function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-7E64QM2WXT');
