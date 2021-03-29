@@ -1,3 +1,51 @@
+.time-display{
+  padding: 5px;
+  background-color: rgba(0, 0, 0, 0.192);
+  font-weight: bolder;
+  font-size: large;
+
+}
+
+.speed-controll{
+    position:absolute; 
+    bottom:0px;
+
+    margin: 20px;
+
+    padding: 8px;
+
+
+    font-size: small;
+    font-family: Arial, Helvetica, sans-serif;
+    
+    color: white;
+    background-color: var(--secondary);
+    
+}
+
+#speed-controll{
+  margin-bottom: 8px;
+}
+
+
+/* make range slider fit better with style of site (rip firefox)*/
+input[type=range]::-webkit-slider-runnable-track {
+  height: 6px;
+  background: var(--primary);
+  border-radius: 1.3px;
+}
+
+input[type=range]::-webkit-slider-thumb { margin-top: -5px; }
+
+
+.speed-label{
+  margin-left: 10px;
+  vertical-align: bottom;
+  /* line-height: 2; */
+  /* vertical-align: top; */
+}
+
+
 .github-link{
     position:absolute; 
     bottom:8px;
@@ -22,7 +70,14 @@
 .try-again{
     text-align: center;
     padding: 20px;
-    margin-top: 37em;
+    margin-top: 35em;
+}
+
+.try-again-hint{
+  color: rgba(253, 253, 253, 0.267);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: smaller;
+  padding-top: 3em;
 }
 
 button{
@@ -131,7 +186,7 @@ button:hover{
 
 .answer-progress-bar-shrink{
   width: 0%;
-  transition: width 6800ms linear;
+  /* transition: width 6800ms linear; */
 }
 
 .number-container{

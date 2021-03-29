@@ -14,7 +14,7 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-7E64QM2WXT"></script>
 
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </head>
 
 
@@ -52,13 +52,23 @@
           </div>
         </div>
         <div class="try-again hidden">
-          <button onclick="start()">Try again?</button>
+          <button onclick="start()">Try again?</button><br>
+          <div class="try-again-hint">To fast? Practice by changing the puzzle time bellow.</div>
         </div>
 
       </div>
 
+      <div class='speed-controll'>
+        
+        <input type="range" id="speed-controll" name="speed-controll" min="7" max="30" value="7">
+        <label class="speed-label" for="speed-controll">Puzzle time: <span class="time-display">7</span></label>
+        
+      </div>
+
       <button class="github-link" onclick='window.location.href = "https://github.com/Jesper-Hustad/NoPixel-minigame"'>GitHub</button>
       <div class="credits">Jesper Hustad (aka. Snacksy)</div>
+
+      
     </div>
 </body>
 

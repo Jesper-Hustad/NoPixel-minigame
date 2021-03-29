@@ -1,3 +1,5 @@
+var puzzleTime = 7
+const $ = name => document.querySelector(name)
 
 const SHAPES = ["square", "triangle", "rectangle", "circle"]
 const COLORABLE = ['background', 'text', 'number', 'shape']
@@ -73,17 +75,15 @@ async function start(){
 }
 
 
-
-
+const squares = [...Array(4).keys()].map(i => $('#square-' + (i+1)))
+const progressBar = $('.answer-progress-bar')
+const inputElement = $('.answer-input')
 
 
 // handles generating puzzle and returning result
 async function doPuzzle(){
 
     // ------ Display numbers ------
-
-    // get DOM squares
-    const squares = [...Array(4).keys()].map(i => $('#square-' + (i+1)))
 
     // reset from previous run
     $('.answer-section').classList.add('hidden')
@@ -95,9 +95,7 @@ async function doPuzzle(){
 
 
     // ------ Activate puzzle ------
-    const progressBar = $('.answer-progress-bar')
-    const inputElement = $('.answer-input')
-    const metronome = playSound('assets/metronome.mp3')
+    const metronome = (puzzleTime == 7) ? playSound('assets/metronome.mp3') : playSound('assets/long-metronome.mp3')
     const puzzles = [...Array(4)].map(_ => generateRandomPuzzle())
 
     // clear and focus input window
@@ -106,9 +104,13 @@ async function doPuzzle(){
     inputElement.focus()
 
     // activate time remaining countdown bar 
+    
+    progressBar.style.transition = ``
     progressBar.classList.remove('answer-progress-bar-shrink')
-    await delay(0.05)
+    await delay(0.1)
+    progressBar.style.transition = `width ${puzzleTime*1000}ms linear`
     progressBar.classList.add('answer-progress-bar-shrink')
+    
 
     // display puzzle in squares
     squares.forEach((square, i) => square.style.backgroundColor = puzzles[i].colors['background'])
@@ -131,8 +133,9 @@ async function doPuzzle(){
             }
         });
 
-        // return false by default if 6.8 seconds go by
-        await delay(6.8)
+        // return false by default if var puzzle time seconds go by
+        await delay(puzzleTime)
+        metronome.pause()
         resolve(false)
     });
 }
@@ -180,6 +183,7 @@ function generateQuestionAndAnswer(nums, puzzles){
 
 
 async function displayNumbers(numbers){
+    console.log(numbers)
     numbers.forEach((n, i) => $('#square-' + n).innerHTML = `<div class="big-numbers can-shrink" id="num-${n}">${(i+1)}</div>`)
 
     await delay(1.5)
@@ -239,7 +243,7 @@ function getPuzzleSvg(puzzleData){
 // ------ Helper functions ------
 
 const delay = s => new Promise(res => setTimeout(res, s * 1000));
-const $ = name => document.querySelector(name)
+
 const randomInt = (max) => Math.floor(Math.random() * Math.floor(max))
 const sample = (arr) => arr[randomInt(arr.length)]
 const shuffleArray = (arr) => arr.map((a) => ({sort: Math.random(), value: a})).sort((a, b) => a.sort - b.sort).map((a) => a.value)
@@ -252,8 +256,21 @@ function playSound(name, volume){
     return sound
 }
 
+// ------ Count visitors ------
+
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-7E64QM2WXT');
 
+// ------ Settings logic ------
+
+const timeInput = document.getElementById('speed-controll')
+const timeDisplay = $('.time-display')
+
+timeInput.addEventListener('input', (event) => {
+    
+    puzzleTime = timeInput.value
+
+    timeDisplay.textContent = puzzleTime
+})
