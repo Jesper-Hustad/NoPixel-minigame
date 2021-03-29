@@ -41,11 +41,11 @@ async function start(){
 
     // mock loading screen
     setInformationText('ESTABLISHING CONNECTION')
-    await delay(1.8)
+    await delay(0.8)
     setInformationText('DOING SOME HACKERMANS STUFF...')
-    await delay(1.5)
+    await delay(1)
     setInformationText('ACCESS CODE FLAGGED; REQUIRES HUMAN CAPTCHA INPUT..')
-    await delay(2)
+    await delay(0.8)
 
     // hide text and show squares
     $('#text-container').classList.toggle('hidden')
