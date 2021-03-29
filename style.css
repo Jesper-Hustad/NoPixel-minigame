@@ -57,6 +57,8 @@ input[type=range]::-webkit-slider-thumb { margin-top: -5px; }
     font-size: small;
 }
 
+
+
 .credits{
     color: gray;
     font-family: Arial, Helvetica, sans-serif;
@@ -70,14 +72,16 @@ input[type=range]::-webkit-slider-thumb { margin-top: -5px; }
 .try-again{
     text-align: center;
     padding: 20px;
-    margin-top: 35em;
+    margin-top: 33em;
+    
 }
 
 .try-again-hint{
   color: rgba(253, 253, 253, 0.267);
   font-family: Arial, Helvetica, sans-serif;
   font-size: smaller;
-  padding-top: 3em;
+  padding-top: 0em;
+  line-height: 5px;
 }
 
 button{

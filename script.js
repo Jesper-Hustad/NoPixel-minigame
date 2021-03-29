@@ -55,10 +55,16 @@ async function start(){
 
 
     // activate puzzle 4 times, break on fail
+    let submitted = ''
+    let answer = ''
     let result = true
+
     for (let i = 0; i < 4 && result; i++) {
-        result = await doPuzzle()
+        [submitted, answer] = await doPuzzle()
+        result = (submitted == answer)
     }
+
+    console.log(submitted)
 
     // hide squares and show text
     $('.answer-section').classList.add('hidden')
@@ -70,6 +76,10 @@ async function start(){
     // display result
     setInformationText((result) ? 'the system has been bypassed.' : "The system didn't accept your answers")
     if(!result) $('.spy-icon').src = 'assets/failed.png'
+
+    $('#answer-reveal').textContent = answer
+    $('#submitted-reveal').textContent = ( (submitted != null) ? `you wrote "${submitted || ' '}"` : "the time ran out before you gave an answer.")
+    
 
     $('.try-again').classList.remove('hidden')
 }
@@ -125,18 +135,18 @@ async function doPuzzle(){
 
     return new Promise(async (resolve) => {
 
-        // return result if user enters answer
+        // return written input and answer
         inputElement.addEventListener("keyup", (event) => {
             if (event.keyCode === 13) {
                 metronome.pause()
-                resolve(inputElement.value == answer)
+                resolve([inputElement.value, answer])
             }
         });
 
-        // return false by default if var puzzle time seconds go by
+        // return nothing by default if puzzleTime seconds go by
         await delay(puzzleTime)
         metronome.pause()
-        resolve(false)
+        resolve([null, answer])
     });
 }
 
