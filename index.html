@@ -21,6 +21,9 @@
 <body onload="start()">
     
     <div class="bg">
+
+      
+      
       <div class="center screen-square">
         
         <div class="center text-container", id="text-container">
@@ -53,7 +56,7 @@
         </div>
         <div class="try-again hidden">
           <button onclick="start()">Try again?</button><br><br><br>
-          <div class="try-again-hint">The answer was: "<span id="answer-reveal"></span>" <span id="submitted-reveal"></span></div><br>
+          <div class="try-again-hint"><span id="submitted-reveal"></span> answer was: "<span id="answer-reveal"></span>" </div><br>
           <div class="try-again-hint">To fast? Practice by changing the puzzle time!</div>
         </div>
 
@@ -65,12 +68,37 @@
         <label class="speed-label" for="speed-controll">Puzzle time: <span class="time-display">7</span></label>
         
       </div>
-
+      <button onclick="helpOn()" class="question-button">?</button>
       <button class="github-link" onclick='window.location.href = "https://github.com/Jesper-Hustad/NoPixel-minigame"'>GitHub</button>
       <div class="credits">Jesper Hustad (aka. Snacksy)</div>
 
       
     </div>
+
+    
+  <div id="overlay" onclick="helpOff()">
+    <div id="text">
+      <h1>Hack minigame explained</h1>
+      <hr>
+      <p>
+        This is a logical reasoning test where you need to quickly connect the words, colors, and shapes.
+        <br><br>
+        You will be given the numbers one to four in a random order, 
+        you whill then have seven seconds to answer two questions. 
+        <br><br>
+        <img class="tutorial-image" src="tutorial/numbers.jpg"><br><br><br>
+        
+        You can see here how the numbers are connect to the images.<br><br>
+        
+        <img class="tutorial-image" src="tutorial/puzzle.jpg">
+
+        <h2>Tip:</h2>
+        Using the slider at the bottom of the page you can change the puzzle time.<br> 
+        You can use this to practice and increase the speed when you get the hang of it. 
+
+      </p>
+    </div>
+  </div>
 </body>
 
 

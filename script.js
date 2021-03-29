@@ -78,7 +78,7 @@ async function start(){
     if(!result) $('.spy-icon').src = 'assets/failed.png'
 
     $('#answer-reveal').textContent = answer
-    $('#submitted-reveal').textContent = ( (submitted != null) ? `you wrote "${submitted || ' '}"` : "the time ran out before you gave an answer.")
+    $('#submitted-reveal').textContent = ( (submitted != null) ? `You wrote "${submitted || ' '}", the` : "The time ran out,")
     
 
     $('.try-again').classList.remove('hidden')
@@ -100,7 +100,8 @@ async function doPuzzle(){
     squares.forEach((square, i) => square.style.backgroundColor = '#2E4561')
         
     // generate numbers and display
-    const nums = shuffleArray([1, 2, 3, 4])
+    // const nums = shuffleArray([1, 2, 3, 4])
+    const nums = [3, 2, 4, 1]
     await displayNumbers(nums)
 
 
@@ -194,7 +195,8 @@ function generateQuestionAndAnswer(nums, puzzles){
 
 async function displayNumbers(numbers){
     console.log(numbers)
-    numbers.forEach((n, i) => $('#square-' + n).innerHTML = `<div class="big-numbers can-shrink" id="num-${n}">${(i+1)}</div>`)
+    // numbers.forEach((n, i) => $('#square-' + n).innerHTML = `<div class="big-numbers can-shrink" id="num-${n}">${(i+1)}</div>`)
+    numbers.forEach((n, i) => $('#square-' + (i+1)).innerHTML = `<div class="big-numbers can-shrink" id="num-${i+1}">${n}</div>`)
 
     await delay(1.5)
     numbers.forEach(n => $('#num-' + n).classList.add('number-shrink'))
@@ -284,3 +286,8 @@ timeInput.addEventListener('input', (event) => {
 
     timeDisplay.textContent = puzzleTime
 })
+
+
+// help menu
+const helpOn = () => $('#overlay').style.display = "block";
+const helpOff = () => $('#overlay').style.display = "none";
