@@ -98,10 +98,9 @@ async function doPuzzle(){
     // reset from previous run
     $('.answer-section').classList.add('hidden')
     squares.forEach((square, i) => square.style.backgroundColor = '#2E4561')
-        
+      
     // generate numbers and display
-    // const nums = shuffleArray([1, 2, 3, 4])
-    const nums = [3, 2, 4, 1]
+    const nums = shuffleArray([1, 2, 3, 4])
     await displayNumbers(nums)
 
 
