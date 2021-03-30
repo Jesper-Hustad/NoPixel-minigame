@@ -14,11 +14,11 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-7E64QM2WXT"></script>
 
     <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
+    <script type="module" src="src/script.js" defer></script>
 </head>
 
 
-<body onload="start()">
+<body>
     
     <div class="bg">
 
@@ -55,7 +55,7 @@
           </div>
         </div>
         <div class="try-again hidden">
-          <button onclick="start()">Try again?</button><br><br><br>
+          <button id="try-again-button">Try again?</button><br><br><br>
           <div class="try-again-hint"><span id="submitted-reveal"></span> answer was: "<span id="answer-reveal"></span>" </div><br>
           <div class="try-again-hint">To fast? Practice by changing the puzzle time!</div>
         </div>
@@ -68,15 +68,18 @@
         <label class="speed-label" for="speed-controll">Puzzle time: <span class="time-display">7</span></label>
         
       </div>
-      <button onclick="helpOn()" class="question-button">?</button>
-      <button class="github-link" onclick='window.location.href = "https://github.com/Jesper-Hustad/NoPixel-minigame"'>GitHub</button>
+      <button id="help-on" class="question-button">?</button>
+      <a href="https://github.com/Jesper-Hustad/NoPixel-minigame">
+        <button class="github-link">GitHub</button>
+      </a>
+      
       <div class="credits">Jesper Hustad (aka. Snacksy)</div>
 
       
     </div>
 
     
-  <div id="overlay" onclick="helpOff()">
+  <div id="overlay">
     <div id="text">
       <h1>Hack minigame explained</h1>
       <hr>
