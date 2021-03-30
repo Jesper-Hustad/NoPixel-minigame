@@ -9,3 +9,11 @@ If there is some part i am missing or something that isn't working right make a 
 
 ## Before creating a PR
 I don't want to add many more features, so just creature comforts and cutting down on the code size.
+
+## Added features
+- Customize time to solve puzzle with a slider.
+- Longer ticking metronome for longer puzzles.
+- Hint text to explain what in your answer was wrong.
+- Explenation page showing how to solve the puzzles.
+- Shortened loading time.
+- Try again button
