@@ -13,6 +13,7 @@
     <!-- measure page views -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-7E64QM2WXT"></script>
 
+    <!-- local css and js -->
     <link rel="stylesheet" href="style.css">
     <script type="module" src="src/script.js" defer></script>
 </head>
@@ -23,7 +24,6 @@
     <div class="bg">
 
       
-      
       <div class="center screen-square">
         
         <div class="center text-container", id="text-container">
@@ -31,6 +31,7 @@
           <h3 class="loading-text" id="loading-text"><span class="capital">E</span>STABLISHING CONNECTION</h3>
         </div>
 
+        <!-- TODO: generate squares in code -->
         <div class="number-container hidden" id="number-container">
           <div class="square" id="square-1"></div>
           <div class="square" id="square-2"></div>
@@ -51,9 +52,9 @@
               <img src="assets/spy-icon.png" class="answer-input-icon">
               <input class="answer-input" placeholder="blue square">
             </div>
-            
           </div>
         </div>
+
         <div class="try-again hidden">
           <button id="try-again-button">Try again?</button><br><br><br>
           <div class="try-again-hint"><span id="submitted-reveal"></span> answer was: "<span id="answer-reveal"></span>" </div><br>
@@ -89,19 +90,20 @@
         You will be given the numbers one to four in a random order, 
         then you have seven seconds to answer two questions. 
         <br><br>
-        <img class="tutorial-image" src="tutorial/numbers.jpg"><br><br><br>
+        <img class="tutorial-image" src="assets/tutorial/numbers.jpg"><br>
+        <br><br>
         
         See here how the numbers are connect to the images giving us the answer square orange.<br><br>
         
-        <img class="tutorial-image" src="tutorial/puzzle.jpg">
+        <img class="tutorial-image" src="assets/tutorial/puzzle.jpg">
 
         <h2>Tip:</h2>
         Using the slider at the bottom of the page you can change the puzzle time.<br> 
         You can use this to practice and increase the speed when you get the hang of it. 
-
       </p>
     </div>
   </div>
+
 </body>
 
 

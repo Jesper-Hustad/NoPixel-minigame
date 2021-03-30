@@ -1,4 +1,3 @@
-/* HELP MENU */
 #overlay {
   position: fixed;
   display: none;
@@ -14,7 +13,6 @@
 }
 
 #text{
-  /* margin: 5em; */
   width: 45em;
   height: 80%;
 
@@ -58,13 +56,11 @@
     
     color: white;
     background-color: var(--secondary);
-    
 }
 
 #speed-controll{
   margin-bottom: 8px;
 }
-
 
 /* make range slider fit better with style of site (rip firefox)*/
 input[type=range]::-webkit-slider-runnable-track {
@@ -79,8 +75,6 @@ input[type=range]::-webkit-slider-thumb { margin-top: -5px; }
 .speed-label{
   margin-left: 10px;
   vertical-align: bottom;
-  /* line-height: 2; */
-  /* vertical-align: top; */
 }
 
 
@@ -100,12 +94,10 @@ input[type=range]::-webkit-slider-thumb { margin-top: -5px; }
   bottom:8px;
   right: 70px;
 
-  /* padding: 5px; */
   padding: 1px 10px 2px 10px;
   margin: 15px;
 
   font-size: x-large;
-  /* font-weight: bolder; */
   font-family: 'Archivo Black', sans-serif;
 }
 
@@ -200,7 +192,7 @@ button:hover{
 
 }
 
-  ::placeholder { 
+::placeholder { 
   color: rgba(214, 215, 235, 0.507);
 }
 
@@ -212,7 +204,7 @@ button:hover{
 
 }
 
-  textarea:focus, input:focus{
+textarea:focus, input:focus{
     outline: none;
 }
 
@@ -240,7 +232,6 @@ button:hover{
 
 .answer-progress-bar-shrink{
   width: 0%;
-  /* transition: width 6800ms linear; */
 }
 
 .number-container{
@@ -252,20 +243,17 @@ button:hover{
   text-align: center;
   color: white;
   
-
   font-size: 10em;
   
   line-height: 1.3;
 
   font-family: Arial, Helvetica, sans-serif;
 
-
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 0px;
   grid-template-areas:
     " . . . . ";
-  
 }
 
 .can-shrink{
@@ -284,7 +272,6 @@ button:hover{
   background-color: var(--secondary);
 
   padding: 30px;
-
 }
 
 .hidden{
@@ -296,9 +283,8 @@ button:hover{
 }
 
 .loading-text{
-    
-    text-align:center;
-    color: white;
+  text-align:center;
+  color: white;
 }
 
 .spy-icon{
@@ -306,7 +292,6 @@ button:hover{
     margin:auto;
     
 }
-
 
 .screen-square{
   width: 1200px;
@@ -345,7 +330,7 @@ padding : 0;
 }
 
 .bg {
-background-image: url("background.png");
+background-image: url("assets/background.png");
 height: 100%;
 
 background-position: center;
