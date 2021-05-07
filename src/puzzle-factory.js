@@ -55,9 +55,9 @@ export function generateRandomPuzzle(){
 
 export function generateQuestionAndAnswer(nums, puzzles){
 
-    const positionOne = randomInt(3) + 1
+    const positionOne = randomInt(4)
     let tempPosTwo
-    do {tempPosTwo = randomInt(3) + 1} while(positionOne == tempPosTwo) 
+    do {tempPosTwo = randomInt(4)} while(positionOne == tempPosTwo) 
     const positionTwo = tempPosTwo
     
 
@@ -66,9 +66,11 @@ export function generateQuestionAndAnswer(nums, puzzles){
     do {tempSecondQuestion = sample(Object.keys(QUESTIONS))} while(tempSecondQuestion == firstQuestion) 
     const secondQuestion = tempSecondQuestion
 
+    
+
     // this is confusing as hell, but works somehow
-    const question =  `${firstQuestion} (${nums[positionOne -1]}) AND ${secondQuestion} (${nums[positionTwo -1]})`
-    const answer = QUESTIONS[firstQuestion](puzzles[positionOne -1]) + ' ' + QUESTIONS[secondQuestion](puzzles[positionTwo -1])
+    const question =  `${firstQuestion} (${nums[positionOne]}) AND ${secondQuestion} (${nums[positionTwo]})`
+    const answer = QUESTIONS[firstQuestion](puzzles[positionOne]) + ' ' + QUESTIONS[secondQuestion](puzzles[positionTwo])
 
     return [question, answer]
 }
