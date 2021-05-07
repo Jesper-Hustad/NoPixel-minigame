@@ -67,8 +67,8 @@ export function generateQuestionAndAnswer(nums, puzzles){
     const secondQuestion = tempSecondQuestion
 
     // this is confusing as hell, but works somehow
-    const question =  `${firstQuestion} (${nums[positionOne]}) AND ${secondQuestion} (${nums[positionTwo]})`
-    const answer = QUESTIONS[firstQuestion](puzzles[positionOne]) + ' ' + QUESTIONS[secondQuestion](puzzles[positionTwo])
+    const question =  `${firstQuestion} (${nums[positionOne -1]}) AND ${secondQuestion} (${nums[positionTwo -1]})`
+    const answer = QUESTIONS[firstQuestion](puzzles[positionOne -1]) + ' ' + QUESTIONS[secondQuestion](puzzles[positionTwo -1])
 
     return [question, answer]
 }
