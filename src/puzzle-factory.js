@@ -18,7 +18,8 @@ const QUESTIONS = {
     'text background color' : (d) => d.colors['text'],
     'number color' : (d) => d.colors['number'],
     'shape color' : (d) => d.colors['shape'],
-    'shape text' : (d) => d.text[1],
+    'color text' : (d) => d.text[0],
+    'shape text' : (d) => d.text[1]
 }
 
 class PuzzleData {
