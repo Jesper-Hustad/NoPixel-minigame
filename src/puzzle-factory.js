@@ -19,7 +19,8 @@ const QUESTIONS = {
     'number color' : (d) => d.colors['number'],
     'shape color' : (d) => d.colors['shape'],
     'color text' : (d) => d.text[0],
-    'shape text' : (d) => d.text[1]
+    'shape text' : (d) => d.text[1],
+    'shape' : (d) => d.shape
 }
 
 class PuzzleData {
@@ -56,9 +57,9 @@ export function generateRandomPuzzle(){
 
 export function generateQuestionAndAnswer(nums, puzzles){
 
-    const positionOne = randomInt(4)
+    const positionOne = randomInt(nums.length)
     let tempPosTwo
-    do {tempPosTwo = randomInt(4)} while(positionOne == tempPosTwo) 
+    do {tempPosTwo = randomInt(nums.length)} while(positionOne == tempPosTwo) 
     const positionTwo = tempPosTwo
     
 

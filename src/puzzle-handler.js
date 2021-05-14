@@ -2,26 +2,34 @@ import { $, shuffleArray, delay, playSound } from './helpers.js'
 import { generateRandomPuzzle, generateQuestionAndAnswer } from './puzzle-factory.js'
 import { getPuzzleSvg } from './svg-factory.js'
 
-const squares = [...Array(4).keys()].map(i => $('#square-' + (i+1)))
 const progressBar = $('.answer-progress-bar')
 const inputElement = $('.answer-input')
 
 let puzzleTime = 7
+let puzzleAmount = 4
 
 // handles generating puzzle and returning result
 export async function doPuzzle(){
-
     // reset from previous run
     $('.answer-section').classList.add('hidden')
-    squares.forEach(square => square.style.backgroundColor = '#2E4561')
+    $(".number-container").innerHTML = ''
+
+    //Generate squares and puzzles
+    const squares = [...Array(puzzleAmount).keys()].map(i => {
+        let square = document.createElement('div')
+        square.id = `square-${i+1}`
+        square.className = 'square'
+        $('#number-container').appendChild(square)
+        return square
+    })
+    const puzzles = [...Array(puzzleAmount)].map(_ => generateRandomPuzzle())
       
     // generate numbers and display
-    const nums = shuffleArray([1, 2, 3, 4])
+    const nums = shuffleArray([...Array(puzzleAmount)].map((v, i) => i+1))
     console.log(nums)
     await displayNumbers(nums)
 
     const metronome = (puzzleTime == 7) ? playSound('assets/metronome.mp3') : playSound('assets/long-metronome.mp3')
-    const puzzles = [...Array(4)].map(_ => generateRandomPuzzle())
 
     // clear and focus input window
     $('.answer-section').classList.remove('hidden')
@@ -71,10 +79,12 @@ async function displayNumbers(numbers){
     numbers.forEach((n, i) => $('#square-' + (i+1)).innerHTML = `<div class="big-numbers can-shrink" id="num-${i+1}">${n}</div>`)
 
     await delay(1.5)
-    numbers.forEach(n => $('#num-' + n).classList.add('number-shrink'))
+    numbers.forEach(n => $('#num-' + (n)).classList.add('number-shrink'))
     await delay(1.5)
 }
 
 // puzzle time settins
-const timeRange = $('#speed-controll')
+const timeRange = $('#speed-control')
+const puzzleRange = $('#puzzle-control')
 timeRange.addEventListener('input', () => puzzleTime = $('.time-display').textContent = timeRange.value)
+puzzleRange.addEventListener('input', () => puzzleAmount = $('.puzzle-display').textContent = parseInt(puzzleRange.value))
