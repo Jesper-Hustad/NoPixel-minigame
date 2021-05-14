@@ -32,7 +32,7 @@ async function start(){
 
     for (let i = 0; i < 4 && result; i++) {
         [submitted, answer] = await doPuzzle()
-        result = (submitted.toLowerCase() == answer)
+        result = (submitted?.toLowerCase() == answer)
     }
 
     // hide squares and show text

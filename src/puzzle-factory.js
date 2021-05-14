@@ -57,9 +57,9 @@ export function generateRandomPuzzle(){
 
 export function generateQuestionAndAnswer(nums, puzzles){
 
-    const positionOne = randomInt(4)
+    const positionOne = randomInt(nums.length)
     let tempPosTwo
-    do {tempPosTwo = randomInt(4)} while(positionOne == tempPosTwo) 
+    do {tempPosTwo = randomInt(nums.length)} while(positionOne == tempPosTwo) 
     const positionTwo = tempPosTwo
     
 
