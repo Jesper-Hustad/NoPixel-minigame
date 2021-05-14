@@ -19,7 +19,8 @@ const QUESTIONS = {
     'number color' : (d) => d.colors['number'],
     'shape color' : (d) => d.colors['shape'],
     'color text' : (d) => d.text[0],
-    'shape text' : (d) => d.text[1]
+    'shape text' : (d) => d.text[1],
+    'shape' : (d) => d.shape
 }
 
 class PuzzleData {
