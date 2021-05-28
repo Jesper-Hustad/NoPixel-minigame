@@ -5,7 +5,7 @@ end)
 
 RegisterNUICallback('callback', function(data, cb)
     closeHack()
-    Callbackk(data.success)
+    callback(data.success)
     cb('ok')
 end)
 
