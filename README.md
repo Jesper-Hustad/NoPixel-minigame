@@ -18,5 +18,10 @@ Tested in Chrome, Safari, and Firefox.
 - Shortened loading time.
 - Try again button
 
+## FiveM version 
+
+You can use this on your FiveM server!  
+Check out the README in the fivem-script folder [here](/fivem-script/README.md).
+
 ## Before creating a PR
 I don't want to add many more features, so just creature comforts and cutting down on the code size.
