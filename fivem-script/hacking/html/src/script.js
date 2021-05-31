@@ -77,17 +77,9 @@ function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-7E64QM2WXT');
 
-$(() => {
-    window.addEventListener('message', (event) => {
-      if (!event.data.action) return;
-  
-      switch (event.data.action) {
-        case 'open': {
-          start();
-          $(".bg").fadeIn(0);
-  
-          break;
-        }
-      }
-    });
-  });
+window.addEventListener('message', (event) => {
+    if (event.data.action === 'open') {
+        start();
+        $(".bg").fadeIn(0);
+    }
+});
