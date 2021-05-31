@@ -8,6 +8,7 @@ client_scripts {
 
 files {
     'html/index.html',
+    'html/*.css',
     'html/src/*.js',
     'html/assets/*.png',
     'html/assets/*.mp3'

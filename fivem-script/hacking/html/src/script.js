@@ -78,10 +78,6 @@ function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-7E64QM2WXT');
 
-// help menu
-const overlay = $('#overlay')
-$('#help-on').addEventListener('click', () => overlay.style.display = "block")
-$('#overlay').addEventListener('click', () => overlay.style.display = "none")
 
 window.addEventListener('message', function(event){
     if (event.data.action == "open") {

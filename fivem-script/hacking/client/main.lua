@@ -5,17 +5,17 @@ end)
 
 RegisterNUICallback('callback', function(data, cb)
     closeHack()
-    callback(data.success)
+    Callbackk(data.success)
     cb('ok')
 end)
 
-function openHack() {
+function openHack()
     SetNuiFocus(true, true)
     SendNUIMessage({
         action = "open"
     })
-}
+end
 
-function closeHack() {
+function closeHack()
     SetNuiFocus(false, false)
-}
+end
