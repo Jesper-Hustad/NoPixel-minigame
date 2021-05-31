@@ -77,13 +77,17 @@ function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-7E64QM2WXT');
 
-$(function () {
-	window.addEventListener('message', function(event){
-        var eventData = event.data;
-
-        if (eventData.action == "open") {
-            start()
-            $(".bg").fadeIn(0);
+$(() => {
+    window.addEventListener('message', (event) => {
+      if (!event.data.action) return;
+  
+      switch (event.data.action) {
+        case 'open': {
+          start();
+          $(".bg").fadeIn(0);
+  
+          break;
         }
-    })
-}); //docready
+      }
+    });
+  });
