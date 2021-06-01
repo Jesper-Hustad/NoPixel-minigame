@@ -42,21 +42,22 @@ async function start(){
     
     // display result
     setInformationText((result) ? 'the system has been bypassed.' : "The system didn't accept your answers")
+    
     if(!result) {
     	$('.spy-icon').src = 'assets/failed.png'
     	$('#answer-reveal').textContent = answer
-    	setTimeout(function () {
-            $.post('http://hacking/callback', JSON.stringify({
-                success: false
-            }));
-        	$(".bg").fadeOut(0);
-    	}, 5000);
-    } else {
-    	$.post('http://hacking/callback', JSON.stringify({
-            success: true
-        }));
-        $(".bg").fadeOut(0);
+        await delay(5)
     }
+
+    fetch('http://hacking/callback', {
+        method: 'POST', 
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+            success: false
+        }) 
+      });
+
+    $(".bg").classList.add('hidden');
 
     $('#submitted-reveal').textContent = (result) ? 'Good job, indeed the' : ((submitted == null) ?  "The time ran out," : `You wrote "${submitted || ' '}", the`)
 }
@@ -77,9 +78,10 @@ function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-7E64QM2WXT');
 
-window.addEventListener('message', (event) => {
-    if (event.data.action === 'open') {
-        start();
-        $(".bg").fadeIn(0);
+
+window.addEventListener('message', function(event){
+    if (event.data.action == "open") {
+        start()
+        $(".bg").classList.remove('hidden');
     }
-});
+})
