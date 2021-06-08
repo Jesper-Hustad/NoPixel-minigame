@@ -53,7 +53,7 @@ async function start(){
         method: 'POST', 
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-            success: false
+            success: result
         }) 
       });
 

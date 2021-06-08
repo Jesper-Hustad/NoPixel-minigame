@@ -13,3 +13,8 @@ files {
     'html/assets/*.png',
     'html/assets/*.mp3'
 }
+
+exports {
+    'OpenHackingGame',
+    'GetHackingStatus',
+}
