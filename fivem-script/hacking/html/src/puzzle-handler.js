@@ -26,7 +26,6 @@ export async function doPuzzle(){
       
     // generate numbers and display
     const nums = shuffleArray([...Array(puzzleAmount)].map((v, i) => i+1))
-    console.log(nums)
     await displayNumbers(nums)
 
     const metronome = playSound('assets/metronome.mp3')
@@ -52,9 +51,6 @@ export async function doPuzzle(){
     // generate and display question
     const [question, answer] = generateQuestionAndAnswer(nums, puzzles) 
     $('.answer-question').textContent = question.toUpperCase()
-    
-    // for learning purposes
-    console.log(answer)
 
     return new Promise(async (resolve) => {
 
