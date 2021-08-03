@@ -28,7 +28,7 @@ end)
 ```
 
 ## Languages
-By going in the `language.js` file located in `fivem-script/hacking/html/src/language.js` you can change the variable `SELECTED_LANGUAGE` to any of the supported languages. Currently the supported languages are `['EN', 'ES', 'IT', 'FR']`. Only the colors are translated. Hopefully we can add more languages and expand the feature, feel free to send a pull request for this feature.
+By going in the `language.js` file located in `fivem-script/hacking/html/src/language.js` you can change the variable `SELECTED_LANGUAGE` to any of the supported languages. Currently the supported languages are `['EN', 'ES', 'IT', 'FR']`. Only the colors are translated. Hopefully we can add more languages and expand the feature, feel free to send a pull request for this feature!
 
 ## FiveM documentation
 Read about scripts in FiveM from the [FiveM Docs](https://docs.fivem.net/docs/scripting-manual/introduction/introduction-to-resources/).
