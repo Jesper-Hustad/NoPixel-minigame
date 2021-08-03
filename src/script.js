@@ -1,5 +1,11 @@
 "use strict"
 
+// langue française = 'FR'
+// lengua española = 'ES'
+// lingua italiana = 'IT'
+// english language = 'EN'
+export const LANGUAGE_OPTION = 'EN'
+
 import { $, delay, playSound } from './helpers.js'
 import { doPuzzle } from './puzzle-handler.js'
 
