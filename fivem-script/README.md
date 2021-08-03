@@ -1,9 +1,10 @@
 # Hack minigame FiveM build
 Because of our great contributors there is now a FiveM version.
 
-## ⚠ STILL IN ALPHA ⚠  
-This version has just recently been released and is still being worked on. Excpect bugs!  
-Do you have knowledge with FiveM? Improve the code and your changes will happily be added.  
+## ⚠ In Beta ⚠  
+This version has been released in beta, but still expect some bugs!
+If you find any, please report it as an issue.
+Do you have knowledge with FiveM? Improve the code and your changes will happily be added!  
 
 
 
