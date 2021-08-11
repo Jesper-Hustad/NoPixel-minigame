@@ -95,7 +95,7 @@ export function generateQuestionAndAnswer(nums, puzzles){
 function convertPuzzleDataLang(puzzle){
     const result = puzzle
     puzzle.colors.background = convertColor(puzzle.colors.background)
-    puzzle.colors.number = convertColor(puzzle.colors.numer)
+    puzzle.colors.number = convertColor(puzzle.colors.number)
     puzzle.colors.shape = convertColor(puzzle.colors.shape)
     puzzle.colors.text = convertColor(puzzle.colors.text)
     puzzle.text = puzzle.text.map(i => isColor(i) ? convertColor(i) : i)
