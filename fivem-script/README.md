@@ -18,11 +18,19 @@ Do you have knowledge with FiveM? Improve the code and your changes will happily
 Use the Success boolean variable.  
 In this example implementation the outcome is written out in the chat.
 ```lua
-exports['hacking']:OpenHackingGame(function(Success)
+exports["hacking"]:hacking(
+function() -- success
     TriggerEvent('chat:addMessage', {
         color = { 255, 0, 0},
         multiline = true,
-        args = {"Me", "Hack: " .. (Success and "passed" or "failed")}
+        args = {"Me", "Hack: passed"}
+    })
+end,
+function() -- failure
+    TriggerEvent('chat:addMessage', {
+        color = { 255, 0, 0},
+        multiline = true,
+        args = {"Me", "Hack: failed"}
     })
 end)
 ```
