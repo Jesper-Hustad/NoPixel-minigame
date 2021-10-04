@@ -13,9 +13,8 @@ Do you have knowledge with FiveM? Improve the code and your changes will happily
 2. Drop it into your FiveM server in `server\resources\`
 3. Implement the hack in your client-side lua file using the `open:minigame` trigger.
 
-
+Note: If you want to change the resource name, remember to update the post events in script.js to match the resource name.
 ## Example implementation
-Use the Success boolean variable.  
 In this example implementation the outcome is written out in the chat.
 ```lua
 exports["hacking"]:hacking(
