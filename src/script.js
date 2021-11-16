@@ -13,6 +13,11 @@ async function start(){
     $('.try-again').classList.add('hidden')
     $('.spy-icon').src = 'assets/spy-icon.png'
 
+    if (fivem) {
+        $('.speed-control').classList.add('hidden');
+        $('.puzzle-control').classList.add('hidden');
+    }
+
     const dialing = playSound('assets/dialing.mp3', 0.1)
 
     // mock loading screen

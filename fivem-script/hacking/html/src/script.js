@@ -3,7 +3,7 @@
 import { $, delay, playSound } from './helpers.js'
 import { doPuzzle } from './puzzle-handler.js'
 
-const fivem = false;
+const fivem = true;
 
 // runs on site load and handles entire  flow
 async function start(){
@@ -12,6 +12,11 @@ async function start(){
     $('.bg').classList.remove('hidden');
     $('.try-again').classList.add('hidden')
     $('.spy-icon').src = 'assets/spy-icon.png'
+
+    if (fivem) {
+        $('.speed-control').classList.add('hidden');
+        $('.puzzle-control').classList.add('hidden');
+    }
 
     const dialing = playSound('assets/dialing.mp3', 0.1)
 
