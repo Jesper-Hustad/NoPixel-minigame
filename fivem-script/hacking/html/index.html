@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hacking minigame</title>
+    <link rel="icon" type="image/png" href="favicon-32x32.png"/>
 
     <!-- load font -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -26,12 +27,12 @@
       
       <div class="center screen-square">
         
-        <div class="center text-container", id="text-container">
+        <div class="center text-container" id="text-container">
           <img src="assets/spy-icon.png" class="spy-icon">
           <h3 class="loading-text" id="loading-text"><span class="capital">E</span>STABLISHING CONNECTION</h3>
         </div>
  
-        <div class="number-container hidden" id="number-container"></div>
+        <div class="number-container hidden"></div>
         
 
         <div class="answer-section hidden">
@@ -50,12 +51,60 @@
         </div>
 
         <div class="try-again hidden">
-          <div class="try-again-hint"><span id="submitted-reveal"></span> answer was: "<span id="answer-reveal"></span>" </div><br>
+          <button class="try-again-button">Try again</button><br><br><br>
+          <div class="try-again-hint"><span class="submitted-reveal"></span> answer was: "<span class="answer-reveal"></span>" </div><br>
+          <div class="try-again-hint">Too fast? Practice by changing the puzzle time!</div>
         </div>
 
       </div>
-    </div>
-</body>
 
+      <div class='speed-control'>
+        
+        <input type="range" id="speed-control" name="speed-control" min="5" max="30" value="7">
+        <label class="speed-label" for="speed-control">Puzzle time: <span class="time-display">7</span></label>
+        
+      </div>
+      <div class='puzzle-control'>
+        
+        <input type="range" id="puzzle-control" name="puzzle-control" min="3" max="6" value="4">
+        <label class="puzzle-label" for="puzzle-control">Puzzle Amount: <span class="puzzle-display">4</span></label>
+        
+      </div>
+
+      <div class='gameinfo'>
+        <button class="help-on question-button">?</button>
+        <a href="https://github.com/Jesper-Hustad/NoPixel-minigame">
+          <button class="github-link">GitHub</button>
+        </a>
+      
+        <div class="credits">Jesper Hustad (aka. Snacksy)</div>
+      </div>
+    </div>
+
+  <div class="overlay">
+    <div id="text">
+      <h1>Hack minigame explained</h1>
+      <hr>
+      <p>
+        This is a logical reasoning test where you need to quickly connect the words, colors, and shapes.
+        <br><br>
+        You will be given the numbers one to four in a random order, 
+        then you have seven seconds to answer two questions. 
+        <br><br>
+        <img class="tutorial-image" src="assets/tutorial/numbers.jpg"><br>
+        <br><br>
+        
+        See here how the numbers are connect to the images giving us the answer square orange.<br><br>
+        
+        <img class="tutorial-image" src="assets/tutorial/puzzle.jpg">
+
+        <h2>Tip:</h2>
+        Using the slider at the bottom of the page you can change the puzzle time.<br> 
+        You can use this to practice and increase the speed when you get the hang of it. 
+      </p>
+    </div>
+  </div>
+
+</body>
 
 </html>
