@@ -47,7 +47,7 @@ async function start(){
     $('#text-container').classList.remove('hidden')
     
     // display result
-    setInformationText((result) ? 'the system has been bypassed.' : "The system didn't accept your answers")
+    setInformationText((result) ? 'the system has been bypassed.' : "Wrong Answer!!🤣🤣")
     if(!result) $('.spy-icon').src = 'assets/failed.png'
 
     $('#answer-reveal').textContent = answer
