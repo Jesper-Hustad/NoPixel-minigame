@@ -17,7 +17,7 @@ Tested in Chrome, Safari, and Firefox.
 - Customize puzzle squares
 - Longer ticking metronome for longer puzzles.
 - Hint text to explain what in your answer was wrong.
-- Explenation page showing how to solve the puzzles.
+- Explanation page showing how to solve the puzzles.
 - Shortened loading time.
 - Try again button
 

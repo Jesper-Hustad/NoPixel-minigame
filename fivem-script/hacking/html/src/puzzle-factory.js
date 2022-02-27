@@ -1,4 +1,5 @@
 import { randomInt, sample } from './helpers.js'
+
 import TRANSLATIONS from './language.js'
 
 const selectedLang = TRANSLATIONS.SELECTED_LANGUAGE
@@ -10,9 +11,12 @@ const SHAPES = ["square", "triangle", "rectangle", "circle"]
 const COLORABLE = ['background', 'text', 'number', 'shape']
 
 const COLOR_CODES = ['black', 'white','#1991F9','#8C0C00','#FFE335','#FF9900','#46A04F','#A43AB5']
+
 const LANG_COLORS = LANG.COLORS.reduce((obj, key, i) => {obj[key] = COLOR_CODES[i]; return obj}, {})
 
 
+// console.log('colors var', COLORS)
+// COLORS becomes this:
 const COLORS = {
     'black' : 'black',
     'white' : 'white', 
@@ -23,6 +27,8 @@ const COLORS = {
     'green' : '#46A04F',
     'purple' : '#A43AB5',
 }
+
+// functions that return answers from PuzzleData class
 const QUESTIONS = {
     'background color' : (d) => d.colors['background'],
     'text background color' : (d) => d.colors['text'],
@@ -78,11 +84,14 @@ export function generateQuestionAndAnswer(nums, puzzles){
     do {tempSecondQuestion = sample(Object.keys(QUESTIONS))} while(tempSecondQuestion == firstQuestion) 
     const secondQuestion = tempSecondQuestion
 
+    const andWord = 'AND'
+
     puzzles = puzzles.map(convertPuzzleDataLang)
 
     // this is confusing as hell, but works somehow
-    const question =  `${firstQuestion} (${nums[positionOne]}) AND ${secondQuestion} (${nums[positionTwo]})`
+    const question =  `${firstQuestion} (${nums[positionOne]}) ${andWord} ${secondQuestion} (${nums[positionTwo]})`
     const answer = QUESTIONS[firstQuestion](puzzles[positionOne]) + ' ' + QUESTIONS[secondQuestion](puzzles[positionTwo])
+
 
     return [question, answer]
 }

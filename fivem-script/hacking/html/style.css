@@ -1,4 +1,4 @@
-#overlay {
+.overlay {
   position: fixed;
   display: none;
   width: 100%;
@@ -339,7 +339,12 @@ padding : 0;
 }
 
 .bg {
+background-image: url("assets/background.png");
 height: 100%;
+
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
 background: transparent;
 }
 

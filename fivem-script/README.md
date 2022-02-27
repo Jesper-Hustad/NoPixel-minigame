@@ -9,7 +9,7 @@ Do you have knowledge with FiveM? Improve the code and your changes will happily
 
 
 ## Getting started
-1. Download the folder `hacking` trough git or [here](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/Jesper-Hustad/NoPixel-minigame/tree/main/fivem-script/hacking)  
+1. Download the folder `hacking` through git or [here](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/Jesper-Hustad/NoPixel-minigame/tree/main/fivem-script/hacking)
 2. Drop it into your FiveM server in `server\resources\`
 3. Implement the hack in your client-side lua file using the `open:minigame` trigger.
 

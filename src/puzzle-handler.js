@@ -19,7 +19,7 @@ export async function doPuzzle(){
         let square = document.createElement('div')
         square.id = `square-${i+1}`
         square.className = 'square'
-        $('#number-container').appendChild(square)
+        $('.number-container').appendChild(square)
         return square
     })
     const puzzles = [...Array(puzzleAmount)].map(() => generateRandomPuzzle())
@@ -29,7 +29,7 @@ export async function doPuzzle(){
     console.log(nums)
     await displayNumbers(nums)
 
-    const metronome = (puzzleTime == 7) ? playSound('assets/metronome.mp3') : playSound('assets/long-metronome.mp3')
+    const metronome = playSound('assets/long-metronome.mp3')
 
     // clear and focus input window
     $('.answer-section').classList.remove('hidden')
@@ -86,7 +86,7 @@ async function displayNumbers(numbers){
     await delay(1.5)
 }
 
-// puzzle time settins
+// puzzle time settings
 const timeRange = $('#speed-control')
 const puzzleRange = $('#puzzle-control')
 timeRange.addEventListener('input', () => puzzleTime = $('.time-display').textContent = timeRange.value)
