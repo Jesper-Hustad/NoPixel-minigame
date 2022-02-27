@@ -22,7 +22,7 @@ export async function doPuzzle(){
         $('.number-container').appendChild(square)
         return square
     })
-    const puzzles = [...Array(puzzleAmount)].map(_ => generateRandomPuzzle())
+    const puzzles = [...Array(puzzleAmount)].map(() => generateRandomPuzzle())
       
     // generate numbers and display
     const nums = shuffleArray([...Array(puzzleAmount)].map((v, i) => i+1))
@@ -46,8 +46,10 @@ export async function doPuzzle(){
     
 
     // display puzzle in squares
-    squares.forEach((square, i) => square.style.backgroundColor = puzzles[i].colors['background'])
-    squares.forEach((square, i)  => square.innerHTML =  getPuzzleSvg(puzzles[i]))
+    squares.forEach((square, i) => {
+        square.style.backgroundColor = puzzles[i].colors['background']
+        square.innerHTML =  getPuzzleSvg(puzzles[i])
+    })
 
     // generate and display question
     const [question, answer] = generateQuestionAndAnswer(nums, puzzles) 
@@ -56,7 +58,7 @@ export async function doPuzzle(){
     // for learning purposes
     console.log(answer)
 
-    return new Promise(async (resolve) => {
+    return new Promise((resolve) => {
 
         // return written input and answer
         inputElement.addEventListener("keyup", (event) => {
@@ -67,9 +69,10 @@ export async function doPuzzle(){
         });
 
         // return nothing by default if puzzleTime seconds go by
-        await delay(puzzleTime)
-        metronome.pause()
-        resolve([null, answer])
+        delay(puzzleTime).then(() => {
+            metronome.pause()
+            resolve([null, answer])
+        });
     });
 }
 

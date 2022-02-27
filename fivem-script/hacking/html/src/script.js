@@ -13,12 +13,7 @@ async function start(){
     $('.try-again').classList.add('hidden')
     $('.spy-icon').src = 'assets/spy-icon.png'
 
-    if (fivem) {
-        $('.speed-control').classList.add('hidden');
-        $('.puzzle-control').classList.add('hidden');
-    }
-
-    const dialing = playSound('assets/dialing.mp3', 0.1)
+    playSound('assets/dialing.mp3', 0.1)
 
     // mock loading screen
     setInformationText('ESTABLISHING CONNECTION')
@@ -50,6 +45,12 @@ async function start(){
 
     // display result
     setInformationText((result) ? 'the system has been bypassed.' : "The system didn't accept your answers")
+
+    if(!result) {
+        $('.spy-icon').src = 'assets/failed.png'
+        $('#answer-reveal').textContent = answer
+        await delay(5)
+    }
 
     if (fivem) {
         fetch('https://hacking/callback', {
@@ -93,7 +94,7 @@ function setInformationText(text){
 
 // count visitors
 window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
+function gtag(){window.dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-7E64QM2WXT');
 
