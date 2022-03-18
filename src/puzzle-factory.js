@@ -1,11 +1,21 @@
 import { randomInt, sample } from './helpers.js'
-
 import TRANSLATIONS from './language.js'
 
-const selectedLang = TRANSLATIONS.SELECTED_LANGUAGE
+// import selectedLang from './script.js'
+let selectedLang = localStorage.getItem('lang') || 'GB'
 
-if(!TRANSLATIONS.LANGUAGES.includes(selectedLang)) console.log(`LANGUAGE NOT SUPPORTED\nSELECTED: ${TRANSLATIONS.SELECTED_LANGUAGE}\nAVAILABLE: ${TRANSLATIONS.LANGUAGES}`)
-const LANG = TRANSLATIONS[selectedLang]
+if(!TRANSLATIONS.LANGUAGES.includes(selectedLang)) console.log(`LANGUAGE NOT SUPPORTED\nSELECTED: ${selectedLang}\nAVAILABLE: ${TRANSLATIONS.LANGUAGES}`)
+let LANG = TRANSLATIONS[selectedLang]
+
+// 
+document.addEventListener("lang", () => console.log("LANG CHANGED" + localStorage.getItem('lang')))
+document.addEventListener("lang", () => LANG = TRANSLATIONS[localStorage.getItem('lang')])
+
+// function loadLanguage(lang){
+//     LANG = TRANSLATIONS[selectedLang]
+// }
+
+
 
 const SHAPES = ["square", "triangle", "rectangle", "circle"]
 const COLORABLE = ['background', 'colortext', 'shapetext', 'number', 'shape']
@@ -110,10 +120,10 @@ function convertPuzzleDataLang(puzzle){
     return result
 }
 
-const isColor = (string) => TRANSLATIONS.EN.COLORS.includes(string)
+const isColor = (string) => TRANSLATIONS.GB.COLORS.includes(string)
 
 function convertColor(originalColor){
-    const englishColors = TRANSLATIONS.EN.COLORS
+    const englishColors = TRANSLATIONS.GB.COLORS
     const position = englishColors.indexOf(originalColor)
     return LANG.COLORS[position]
 }

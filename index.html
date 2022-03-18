@@ -13,6 +13,8 @@
     <!-- measure page views -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-7E64QM2WXT"></script>
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/4.1.5/css/flag-icons.min.css" integrity="sha512-UwbBNAFoECXUPeDhlKR3zzWU3j8ddKIQQsDOsKhXQGdiB5i3IHEXr9kXx82+gaHigbNKbTDp3VY/G6gZqva6ZQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <!-- local css and js -->
     <link rel="stylesheet" href="style.css">
     <script type="module" src="src/script.js" defer></script>
@@ -67,8 +69,18 @@
         
         <input type="range" id="puzzle-control" name="puzzle-control" min="3" max="6" value="4">
         <label class="puzzle-label" for="puzzle-control">Puzzle Amount: <span class="puzzle-display">4</span></label>
-        
+        <!-- flag-icon-af -->
       </div>
+      
+      <div class="dropdown">
+        <button id="language-toggle" class="flag-dropdown dropbtn">
+          <span class="flag-selected-display flag-icon-gb"></span></span>
+          v
+        </button>
+        <div id="language-list" class="dropdown-content">
+        </div>
+      </div>
+
       <button id="help-on" class="question-button">?</button>
       <a href="https://github.com/Jesper-Hustad/NoPixel-minigame">
         <button class="github-link">GitHub</button>
