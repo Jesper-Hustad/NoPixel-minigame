@@ -6,8 +6,17 @@ Click the thumbnail bellow to try it out!
 
 [![](thumbnail.jpg)](https://jesper-hustad.github.io/NoPixel-minigame/index)
 
+## New! Language support  
+There is now a simple language selector window.  
+For now it only changes the language of the colors, but hope to improve this to the entire interface.  
+Is your language missing?
+Add it [here](https://github.com/Jesper-Hustad/NoPixel-minigame/blob/main/src/language.js) and your changes can be merged!
+
+![](languages-selector.png)
+
 ## Is something wrong?
 If there is some part that is missing or something that isn't working right make an issue here on GitHub it will be looked at.
+
 
 ## Supported browsers
 Tested in Chrome, Safari, and Firefox.

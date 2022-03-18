@@ -5,10 +5,8 @@
 // lingua italiana = 'IT'
 // english language = 'EN'
 let LANGUAGE_OPTION = 'FR'
-var selectedLang = 'FR'
-export default LANGUAGE_OPTION
 
-
+import TRANSLATIONS from './language.js'
 import { $, delay, playSound } from './helpers.js'
 import { doPuzzle } from './puzzle-handler.js'
 
@@ -112,18 +110,16 @@ window.onclick = function(event) {
     }
 }
 
-const languages = ['gb','no','fr','de','es']
 
-languages
-    .map(lang => {
+TRANSLATIONS.LANGUAGES.map(lang => {
         let b = document.createElement('button');
         let s = document.createElement('span')
         s.classList.add('flag-option')
-        s.classList.add('flag-icon-' + lang)
+        s.classList.add('flag-icon-' + lang.toLowerCase())
         b.append(s)
-        b.setAttribute('lang',lang)
+        b.setAttribute('lang',lang.toLowerCase())
         b.classList.add('language-option') 
-        b.append(lang.toUpperCase()); 
+        b.append(lang); 
         
         return b 
     })
