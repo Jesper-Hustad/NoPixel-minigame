@@ -5,7 +5,7 @@ Preliminary implementation was made using Google Translate.
 It is therefore expected that there will be some mistakes and possible improvements to be made.  
 That is where you come in!
 
-![](flags.png)
+![](flags.png)  
 *Currently supported languages*
 
 ## How to edit language file
