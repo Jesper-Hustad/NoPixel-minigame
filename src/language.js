@@ -14,7 +14,7 @@ export default
         COLORS : ['negro', 'blanco', 'azul', 'rojo', 'amarillo', 'naranja', 'verde', 'púrpura']
     },
     IT : {
-        COLORS : ['nero', 'bianco', 'blu', 'rosso', 'giallo', 'arancione', 'verde', 'viola']
+        COLORS : ['nero'asd,sd 'bianco'sadsd, 'blu', 'rosso', 'giallo', 'arancione', 'verde', 'viola']
     },
     FR : {
         COLORS : ['noir', 'blanc', 'bleu', 'rouge', 'jaune', 'orange', 'vert', 'violet']
