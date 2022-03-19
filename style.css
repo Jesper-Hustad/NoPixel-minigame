@@ -135,9 +135,9 @@ input[type=range]::-webkit-slider-thumb { margin-top: -5px; }
 }
 
 .try-again-hint{
-  color: rgba(253, 253, 253, 0.267);
+  color: rgb(253 253 253 / 60%);
   font-family: Arial, Helvetica, sans-serif;
-  font-size: smaller;
+  font-size: 15px;
   padding-top: 0em;
   line-height: 5px;
 }
@@ -376,9 +376,9 @@ background-size: cover;
 }
 
 .flag-option{
-  padding: 1px 27px 3px 1px;
-  width: 21px;
-  margin: 13px 11px 10px 0px;
+  padding: 0px 23px 0px 0px;
+    width: 9px;
+    margin: 16px 7px 10px 25px;
 }
 
 
@@ -427,10 +427,28 @@ background-size: cover;
 
 .language-option{
   width: 100%;
-  padding: 10px 1px;
-  border-bottom: solid #4a617c 3px;
+  padding: 4px 1px;
+  border-bottom: solid #4a617c 2px;
+  font-size: 15px;
+  text-align: left;
 }
+
+
 
 .language-option:hover{
   background-color: #577396;
+}
+
+
+
+.readme-display{
+  padding: 4px 1px;
+  border-bottom: solid #4a617c 2px;
+  font-size: 15px;
+  text-align: left;
+}
+
+.readme-flag {
+  padding: 0px 22px 0px 0px;
+  margin: 7px 5px 5px 5px;
 }

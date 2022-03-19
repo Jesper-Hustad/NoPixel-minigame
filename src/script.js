@@ -4,11 +4,15 @@
 // lengua española = 'ES'
 // lingua italiana = 'IT'
 // english language = 'EN'
+
+let tryAgainAvailable = false
 let LANGUAGE_OPTION = 'FR'
 
 import TRANSLATIONS from './language.js'
 import { $, delay, playSound } from './helpers.js'
 import { doPuzzle } from './puzzle-handler.js'
+import {trMisc as tr} from './translator.js'
+
 
 // runs on site load and handles entire  flow
 async function start(){
@@ -16,15 +20,16 @@ async function start(){
     // reset from previous
     $('.try-again').classList.add('hidden')
     $('.spy-icon').src = 'assets/spy-icon.png'
+    tryAgainAvailable = false
 
     playSound('assets/dialing.mp3', 0.1)
 
     // mock loading screen
-    setInformationText('ESTABLISHING CONNECTION')
+    setInformationText(tr('ESTABLISHING CONNECTION'))
     await delay(0.8)
-    setInformationText('DOING SOME HACKERMANS STUFF...')
+    setInformationText(tr('DOING SOME HACKERMANS STUFF...'))
     await delay(1)
-    setInformationText('ACCESS CODE FLAGGED; REQUIRES HUMAN CAPTCHA INPUT..')
+    setInformationText(tr('ACCESS CODE FLAGGED; REQUIRES HUMAN CAPTCHA INPUT..'))
     await delay(0.8)
 
     // hide text and show squares
@@ -46,16 +51,17 @@ async function start(){
     $('.answer-section').classList.add('hidden')
     $('.number-container').classList.add('hidden')
     $('#text-container').classList.remove('hidden')
+    tryAgainAvailable = true
     
     // display result
-    setInformationText((result) ? 'the system has been bypassed.' : "The system didn't accept your answers")
+    setInformationText((result) ? tr('the system has been bypassed.') : tr("The system didn't accept your answers"))
     if(!result) $('.spy-icon').src = 'assets/failed.png'
 
     $('#answer-reveal').textContent = answer
 
-    $('#submitted-reveal').textContent = (result) ?             'Good job, indeed the' :
-                                        ((submitted == null) ?  "The time ran out," : 
-                                                                `You wrote "${submitted || ' '}", the`)
+    $('#submitted-reveal').textContent = (result) ?             tr('Good job, ') :
+                                        ((submitted == null) ?  tr("The time ran out,") : 
+                                                                `${tr('You wrote')} "${submitted || ' '}" `)
 
     $('.try-again').classList.remove('hidden')
 }
@@ -90,63 +96,23 @@ const overlay = $('#overlay')
 $('#help-on').addEventListener('click', () => overlay.style.display = "block")
 $('#overlay').addEventListener('click', () => overlay.style.display = "none")
 
-// language dropdown
-$('#language-toggle').addEventListener('click', () => toggleLanguageDropdown())
+window.addEventListener("keydown", function (e) {
+    if($('#answer-placeholder') == document.activeElement) return
 
-function toggleLanguageDropdown(){
-    $("#language-list").classList.toggle("show");
-}
-  
-window.onclick = function(event) {
-    if (!event.target.matches('.dropbtn')) {
-        let dropdowns = $(".dropdown-content");
-        let i;
-        for (i = 0; i < dropdowns.length; i++) {
-            let openDropdown = dropdowns[i];
-            if (openDropdown.classList.contains('show')) {
-                openDropdown.classList.remove('show');
-            } 
-        }
-    }
-}
+    if(e.code != 'Space') return
+
+    if(!tryAgainAvailable) return
+
+    console.log('clicking TRY AGAIN')
+    $('#try-again-button').click() 
+    
+    // if (event.defaultPrevented) {
+    //   return; // Do nothing if the event was already processed
+    // }
+})
 
 
-TRANSLATIONS.LANGUAGES.map(lang => {
-        let b = document.createElement('button');
-        let s = document.createElement('span')
-        s.classList.add('flag-option')
-        s.classList.add('flag-icon-' + lang.toLowerCase())
-        b.append(s)
-        b.setAttribute('lang',lang.toLowerCase())
-        b.classList.add('language-option') 
-        b.append(lang); 
-        
-        return b 
-    })
-    .forEach(b => $('#language-list').append(b))
-
-document.querySelectorAll('.language-option').forEach(o =>o.addEventListener('click', selectedLanguage))
-
-function selectedLanguage(e){
-    const lang = e.target.getAttribute('lang')
-    localStorage.setItem('lang', lang.toUpperCase())
-    document.dispatchEvent(new Event('lang'));
-    console.log(localStorage.getItem('lang'))
-    $("#language-list").classList.toggle("show");
-
-    setFlag()
-
-    window.location.reload()
-}
-
-function setFlag(){
-    const lang = localStorage.getItem('lang') || 'GB'
-    console.log('set flag', lang)
-    $(".flag-selected-display").classList = 'flag-selected-display flag-icon-' + lang.toLowerCase()
-}
 
 $('#try-again-button').addEventListener('click', start)
 
-
-setFlag()
 start()

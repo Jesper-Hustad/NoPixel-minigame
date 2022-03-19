@@ -1,6 +1,7 @@
 import { $, shuffleArray, delay, playSound } from './helpers.js'
 import { generateRandomPuzzle, generateQuestionAndAnswer } from './puzzle-factory.js'
 import { getPuzzleSvg } from './svg-factory.js'
+import { translatePuzzle, translateQA } from './translator.js'
 
 const progressBar = $('.answer-progress-bar')
 const inputElement = $('.answer-input')
@@ -45,6 +46,8 @@ export async function doPuzzle(){
     progressBar.classList.add('answer-progress-bar-shrink')
     
 
+    
+
     // display puzzle in squares
     squares.forEach((square, i) => {
         square.style.backgroundColor = puzzles[i].colors['background']
@@ -54,6 +57,8 @@ export async function doPuzzle(){
     // generate and display question
     const [question, answer] = generateQuestionAndAnswer(nums, puzzles) 
     $('.answer-question').textContent = question.toUpperCase()
+
+    
     
     // for learning purposes
     console.log(answer)

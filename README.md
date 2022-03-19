@@ -6,22 +6,33 @@ Click the thumbnail bellow to try it out!
 
 [![](thumbnail.jpg)](https://jesper-hustad.github.io/NoPixel-minigame/index)
 
-## New! Language support  
-There is now a simple language selector window.  
-For now it only changes the language of the colors, but hope to improve this to the entire interface.  
-Is your language missing?
-Add it [here](https://github.com/Jesper-Hustad/NoPixel-minigame/blob/main/src/language.js) and your changes can be merged!
-
-![](languages-selector.png)
 
 ## Is something wrong?
 If there is some part that is missing or something that isn't working right make an issue here on GitHub it will be looked at.
+
+## New! Language support  
+
+After many requests language support has finally been added.  
+The first translations where made by google translate so may not all be perfect.  
+If you find that there is a mistake in your language please [read these instructions](./language-instructions/README.md) on how to fix it. 
+
+
+[![](language-instructions/flags-report.png)](./language-instructions/README.md)
+
+## Upcoming features
+**Randomly alternating text:**  
+Thanks to qwewas123 for this pull request.  
+Will be implemented with a toggle button for those training on older versions.  
+
+**Better colorblind colors:**  
+It seems the NoPixel version updated it's colors. Will add a toggle button for this also.
 
 
 ## Supported browsers
 Tested in Chrome, Safari, and Firefox.
 
 ## Added features
+- Spacebar shortcut to try again
 - Customize time to solve puzzle with a slider.
 - Customize puzzle squares
 - Longer ticking metronome for longer puzzles.

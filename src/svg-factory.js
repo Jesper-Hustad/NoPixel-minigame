@@ -4,6 +4,7 @@
  * @param {PuzzleData} puzzleData 
  */
 export function getPuzzleSvg(puzzleData){
+
     
     const textSize = 21
     const textWeigth = 'normal'

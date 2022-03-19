@@ -46,15 +46,17 @@
             <div class="answer-box-description">Answer</div>
             <div class="answer-input-area">
               <img src="assets/spy-icon.png" class="answer-input-icon">
-              <input class="answer-input" placeholder="blue square">
+              <input class="answer-input" id="answer-placeholder" placeholder="blue square">
             </div>
           </div>
         </div>
 
         <div class="try-again hidden">
-          <button id="try-again-button">Try again</button><br><br><br>
-          <div class="try-again-hint"><span id="submitted-reveal"></span> answer was: "<span id="answer-reveal"></span>" </div><br>
-          <div class="try-again-hint">Too fast? Practice by changing the puzzle time!</div>
+          <button id="try-again-button">Try again</button><br><br>
+          <div class="try-again-hint" style="padding-top: 10px;">
+            <span id="submitted-reveal"></span> <span id="answer-was">the answer was:</span> "<span id="answer-reveal"></span>" 
+          </div><br>
+          <div class="try-again-hint" id="to-fast">Too fast? Practice by changing the puzzle time!</div>
         </div>
 
       </div>
@@ -62,13 +64,13 @@
       <div class='speed-control'>
         
         <input type="range" id="speed-control" name="speed-control" min="5" max="30" value="7">
-        <label class="speed-label" for="speed-control">Puzzle time: <span class="time-display">7</span></label>
+        <label class="speed-label" for="speed-control"><span id="puzzle-time">Puzzle time</span>: <span class="time-display">7</span></label>
         
       </div>
       <div class='puzzle-control'>
         
         <input type="range" id="puzzle-control" name="puzzle-control" min="3" max="6" value="4">
-        <label class="puzzle-label" for="puzzle-control">Puzzle Amount: <span class="puzzle-display">4</span></label>
+        <label class="puzzle-label" for="puzzle-control"><span id="puzzle-amount">Puzzle Amount</span>: <span class="puzzle-display">4</span></label>
         <!-- flag-icon-af -->
       </div>
       
