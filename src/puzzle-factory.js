@@ -15,33 +15,20 @@ document.addEventListener("lang", () => LANG = TRANSLATIONS[localStorage.getItem
 const SHAPES = ["square", "triangle", "rectangle", "circle"]
 const COLORABLE = ['background', 'colortext', 'shapetext', 'number', 'shape']
 
-// const COLOR_CODES = ['black', 'white','#1991F9','#8C0C00','#FFE335','#FF9900','#46A04F','#A43AB5']
-const COLOR_CODES = ['#000000', '#FFFFFF','#2196f3','#800000','#FFEB3C','#FF9800','#4CB050','#9D27B0']
+
+const COLOR_CODES = ['#000000', '#FFFFFF','#2195ee','7b0100','#fceb3d','#fd9802','#4cae4f','#9926ac0']
 
 const LANG_COLORS = LANG.COLORS.reduce((obj, key, i) => {obj[key] = COLOR_CODES[i]; return obj}, {})
 
-
-// COLORS becomes this:
-// const COLORS = {
-//     'black' : 'black',
-//     'white' : 'white',
-//     'blue' : '#1991F9',
-//     'red' : '#8C0C00',
-//     'yellow' : '#FFE335',
-//     'orange' : '#FF9900',
-//     'green' : '#46A04F',
-//     'purple' : '#A43AB5',
-// }
-
-const COLORS = {
+export const COLORS = {
     'black' : '#000000',
     'white' : '#FFFFFF', 
-    'blue' : '#2196f3',
-    'red' : '#800000',
-    'yellow' : '#FFEB3C', //done
-    'orange' : '#FF9800',
-    'green' : '#4CB050', //done
-    'purple' : '#9D27B0', //done
+    'blue' : '#2195ee',
+    'red' : '7b0100',
+    'yellow' : '#fceb3d',
+    'orange' : '#fd9802',
+    'green' : '#4cae4f',
+    'purple' : '#9926ac',
 }
 
 
@@ -86,6 +73,9 @@ export function generateRandomPuzzle(){
         colors['shape'] = sample(Object.keys(COLORS))
     }
 
+    // convert to hex color values
+    Object.keys(colors).forEach(k => colors[k] = COLORS[colors[k]])
+
     topText = trColors(topText)
     bottomText = trShapes(bottomText)
 
@@ -111,7 +101,12 @@ export function generateQuestionAndAnswer(nums, puzzles){
 
     const a1 = QUESTIONS[firstQuestion](puzzles[positionOne])
     const a2 = QUESTIONS[secondQuestion](puzzles[positionTwo])
-    const answer = trPuzzle(a1) + ' ' + trPuzzle(a2)
+
+    // convert from hex codes to color names, skip if shape
+    const nameA1 = Object.keys(COLORS).find(k=>COLORS[k]===a1) || a1
+    const nameA2 = Object.keys(COLORS).find(k=>COLORS[k]===a2) || a2
+
+    const answer = trPuzzle(nameA1) + ' ' + trPuzzle(nameA2)
 
     return [question, answer]
 }

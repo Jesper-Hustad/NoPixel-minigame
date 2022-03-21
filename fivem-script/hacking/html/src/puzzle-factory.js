@@ -60,7 +60,8 @@ export function generateRandomPuzzle(){
     // ensure nothing blends with shape
     while(['background', 'text', 'number'].map(i => colors[i]).includes(colors['shape']))
         colors['shape'] = sample(Object.keys(COLORS))
-    
+
+
     return new PuzzleData(shape, number, [topText, bottomText], colors)
 }
 
