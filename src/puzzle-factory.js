@@ -16,7 +16,7 @@ const SHAPES = ["square", "triangle", "rectangle", "circle"]
 const COLORABLE = ['background', 'colortext', 'shapetext', 'number', 'shape']
 
 
-const COLOR_CODES = ['#000000', '#FFFFFF','#2195ee','7b0100','#fceb3d','#fd9802','#4cae4f','#9926ac0']
+const COLOR_CODES = ['#000000', '#FFFFFF','#2195ee','#7b0100','#fceb3d','#fd9802','#4cae4f','#9926ac0']
 
 const LANG_COLORS = LANG.COLORS.reduce((obj, key, i) => {obj[key] = COLOR_CODES[i]; return obj}, {})
 
@@ -24,7 +24,7 @@ export const COLORS = {
     'black' : '#000000',
     'white' : '#FFFFFF', 
     'blue' : '#2195ee',
-    'red' : '7b0100',
+    'red' : '#7b0100',
     'yellow' : '#fceb3d',
     'orange' : '#fd9802',
     'green' : '#4cae4f',
