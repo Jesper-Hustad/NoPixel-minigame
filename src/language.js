@@ -143,7 +143,7 @@ export default
     },
     DE : {
         COLORS : ['schwarz', 'weiß', 'blau', 'rot', 'gelb', 'orange', 'grün', 'lila'],
-        FORMEN : ["Quadrat", "Dreieck", "Rechteck", "Kreis"],
+        SHAPES : ["Quadrat", "Dreieck", "Rechteck", "Kreis"],
         QUESTIONS : [
             'Hintergrundfarbe',
              'Text Hintergrundfarbe färben',
