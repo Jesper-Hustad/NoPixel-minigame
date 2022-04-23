@@ -415,6 +415,33 @@ export default
             "Puzzeltijd"
         ]
     },
+    PT-BR : {
+        COLORS : ['preto', 'branco', 'azul', 'vermelho', 'amarelo', 'laranja', 'verde', 'roxo'],
+        SHAPES: ["quadrado", "triangulo", "rectangulo", "circulo"],
+        QUESTIONS : [
+            'cor de fundo',
+            'cor de fundo do texto',
+            'cor de fundo da forma do texto',
+            'número da cor',
+            'cor da forma',
+            'texto da cor',
+            'texto da forma',
+            'forma'
+        ],
+        MISC : [
+            'Y',
+            'Muito rápido? Pratique mudando o tempo do puzzle!',
+            'ESTABELECENDO CONEXÃO',
+            'MEXENDO EM ALGUMAS LINHAS DE CÓDIGO...',
+            'CÓDIGO DE ACESSO DESCOBERTO; PRECISA DE ENTRADA CAPTCHA HUMANA..',
+            'O sistema foi invadido.',
+            "O sistema não aceitou a sua resposta.",
+            "a resposta era",
+            "Bom trabalho, ",
+            "O tempo acabou",
+            "Você escreveu"
+        ]
+    }
 }
 
 // TEMPLATE FOR GOOGLE TRANSLATE,
