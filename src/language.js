@@ -415,7 +415,7 @@ export default
             "Puzzeltijd"
         ]
     },
-    PT-BR : {
+    BR : {
         COLORS : ['preto', 'branco', 'azul', 'vermelho', 'amarelo', 'laranja', 'verde', 'roxo'],
         SHAPES: ["quadrado", "triangulo", "rectangulo", "circulo"],
         QUESTIONS : [
