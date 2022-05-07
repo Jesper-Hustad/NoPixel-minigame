@@ -173,12 +173,12 @@ export default
         SHAPES : ["kwadrat", "trójkąt", "prostokąt", "kółko"],
         QUESTIONS : [
             "kolor tła",
-            "kolorowy kolor tła tekstu",
-            "kolor tła kształtu tekstu",
-            "kolor numeru",
+            "kolor napisanego koloru",
+            "kolor napisanego kształtu",
+            "kolor cyfry",
             "kolor kształtu",
-            "kolorowy tekst",
-            "tekst kształtu",
+            "napisany kolor",
+            "napisany kształt",
             "kształt"
         ],
         MISC : [
