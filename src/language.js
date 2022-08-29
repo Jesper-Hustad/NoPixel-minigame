@@ -417,7 +417,7 @@ export default
     },
     BR : {
         COLORS : ['preto', 'branco', 'azul', 'vermelho', 'amarelo', 'laranja', 'verde', 'roxo'],
-        SHAPES: ["quadrado", "triangulo", "rectangulo", "circulo"],
+        SHAPES: ["quadrado", "triangulo", "retangulo", "circulo"],
         QUESTIONS : [
             'cor de fundo',
             'cor de fundo do texto',
