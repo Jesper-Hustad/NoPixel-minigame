@@ -441,6 +441,36 @@ export default
             "O tempo acabou",
             "Você escreveu"
         ]
+    },
+    LT : {
+        COLORS : ['juodas', 'baltas', 'mėlynas', 'raudonas', 'geltonas', 'oranžinis', 'žalias', 'violetinis'],
+        SHAPES : ["kvadratas", "trikampis", "stačiakampis", "apskritimas"],
+        QUESTIONS : [
+            'fono spalva',
+            'spalvoto teksto fono spalva',
+            'figūros teksto fono spalva',
+            'skaičiaus spalva',
+            'figūros spalva',
+            'spalvos tekstas',
+            'figūros tekstas',
+            'figūra'
+        ],
+        MISC : [
+            'IR', 
+            'Per greitai? Praktikuokitės keisdami galvosūkio laiką!',
+            'UŽMEZGAMAS RYŠYS',
+            'ĮSILAUŽIAMA Į SISTEMĄ...',
+            'PRIEIGA UŽDRAUSTA; REIKALINGAS ŽMOGAUS PATVIRTINIMAS..',
+            'sistema buvo apeita.',
+            "Sistema nepriėmė jūsų atsakymų",
+            "atsakymas buvo",
+            "Šaunu, ",
+            "Laikas baigėsi,",
+            "Parašėte",
+            "Bandykite dar kartą",
+            "Skaičiai",
+            "Laikas"
+        ]
     }
 }
 
