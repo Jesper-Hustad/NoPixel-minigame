@@ -441,6 +441,50 @@ export default
             "O tempo acabou",
             "Você escreveu"
         ]
+    },
+    HU : {
+        COLORS : [
+            'fekete', 
+            'fehér', 
+            'kék', 
+            'piros', 
+            'sárga', 
+            'narancs', 
+            'zöld', 
+            'lila'
+        ],
+        SHAPES : [
+            "négyzet", 
+            "háromszög", 
+            "téglalap", 
+            "kör"
+        ],
+        QUESTIONS : [
+            "háttér színe",
+            "szín felirat",
+            "felirat háttérszine",
+            "szám színe",
+            "alakzat szine",
+            "color text",
+            "alak felirat",
+            "alak"
+        ],
+        MISC : [
+            'ÉS', 
+            'Túl gyors? Gyakorolj a kirakási idő megváltoztatásával!',
+            'ESTABLISHING CONNECTION',
+            'DOING SOME HACKERMANS STUFF...',
+            'ACCESS CODE FLAGGED; REQUIRES HUMAN CAPTCHA INPUT..',
+            'the system has been bypassed.',
+            "The system didn't accept your answers",
+            "the answer was",
+            "Szép munka, ",
+            "Az idő lejárt",
+            "Te írtad",
+            "Próbáld újra",
+            "A rejtvény összege",
+            "A rejtvény ideje"
+        ]
     }
 }
 
