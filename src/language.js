@@ -489,32 +489,32 @@ export default
 }
 
 // TEMPLATE FOR GOOGLE TRANSLATE,
-// : {
+// HU : {
 //     COLORS : [
-//         'black', 
-//         'white', 
-//         'blue', 
-//         'red', 
-//         'yellow', 
-//         'orange', 
-//         'green', 
-//         'purple'
+//         'fekete', 
+//         'fehér', 
+//         'kék', 
+//         'piros', 
+//         'sárga', 
+//         'narancs', 
+//         'zöld', 
+//         'lila'
 //     ],
 //     SHAPES : [
-//         "square", 
-//         "triangle", 
-//         "rectangle", 
-//         "circle"
+//         "négyzet", 
+//         "háromszög", 
+//         "téglalap", 
+//         "kör"
 //     ],
 //     QUESTIONS : [
-//         "background color",
-//         "color text background color",
-//         "shape text background color",
-//         "number color",
-//         "shape color",
+//         "háttér színe",
+//         "szín felirat",
+//         "felirat háttérszine",
+//         "szám színe",
+//         "alakzat szine",
 //         "color text",
-//         "shape text",
-//         "shape"
+//         "alak felirat",
+//         "alak"
 //     ],
 //     MISC : [
 //         "AND", 
