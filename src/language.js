@@ -485,6 +485,36 @@ export default
             "A rejtvény összege",
             "A rejtvény ideje"
         ]
+    },
+    TR : {
+        COLORS : ['siyah', 'beyaz', 'mavi', 'kırmızı', 'sarı', 'turuncu', 'yeşil', 'mor'],
+        SHAPES : ["kare", "üçgen", "dikdörtgen", "daire"],
+        QUESTIONS : [
+            'arkaplan rengi',
+            'renk yazısının arkaplan rengi',
+            'şekil yazısının arkaplan rengi',
+            'sayı rengi',
+            'şekil rengi',
+            'renk yazısı',
+            'şekil yazısı',
+            'şekil'
+        ],
+        MISC : [
+            'VE', 
+            'Çok mu hızlı? Bulmaca süresini değiştirerek pratik yapın!',
+            'BAĞLANTI KURULUYOR...',
+            'BAZI HACKERMAN İŞLERİ YAPILIYOR...',
+            'ERİŞİM KODUNA ERİŞİLDİ; İNSAN CAPTCHA GİRİŞİ GEREKİYOR..',
+            'sistem bypass edildi.',
+            "Sistem cevaplarınızı kabul etmedi",
+            "doğru cevap: ",
+            "İyi iş, ",
+            "Süre bitti,",
+            "Yazdığın",
+            "Tekrar dene",
+            "Bulmaca miktarı",
+            "Bulmaza zamanı"
+        ]
     }
 }
 
