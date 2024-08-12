@@ -1,17 +1,17 @@
 export default
 {
     GB : {
-        COLORS : ['black', 'white', 'blue', 'red', 'yellow', 'orange', 'green', 'purple'],
-        SHAPES : ["square", "triangle", "rectangle", "circle"],
+        COLORS : ['اسود', 'ابيض', 'ازرق', 'احمر', 'اصفر', 'برتقالي', 'اخضر', 'بنفسجي'],
+        SHAPES : ["مربع", "مثلث", "المستطيل", "دائرة"],
         QUESTIONS : [
-            'background color',
-            'color text background color',
-            'shape text background color',
-            'number color',
-            'shape color',
-            'color text',
-            'shape text',
-            'shape'
+            'لون الخلفية',
+            'لون النص لون الخلفية',
+            'شكل لون خلفية النص',
+            'لون الرقم',
+            'لون الشكل',
+            'نص اللون',
+            'نص الشكل',
+            'شكل'
         ],
         MISC : [
             'AND', 
