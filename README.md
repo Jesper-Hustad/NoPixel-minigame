@@ -47,3 +47,48 @@ Check out the README in the fivem-script folder [here](/fivem-script/README.md).
 
 ## Before creating a PR
 Currently don't want to add many more features, so just creature comforts and cutting down on the code size.
+
+## Deployment Instructions
+
+### Prerequisites
+
+- Docker
+- Docker Compose
+
+### Steps
+
+1. Clone the repository:
+
+```sh
+git clone https://github.com/Jesper-Hustad/NoPixel-minigame.git
+cd NoPixel-minigame
+```
+
+2. Build the Docker image:
+
+```sh
+docker build -t nopixel-minigame .
+```
+
+3. Run the application using Docker Compose:
+
+```sh
+docker-compose up -d
+```
+
+4. Access the application in your browser at `http://localhost`.
+
+### Troubleshooting
+
+- If you encounter any issues with building the Docker image, ensure that Docker is installed and running on your machine.
+- If the application does not start, check the Docker Compose logs for any error messages:
+
+```sh
+docker-compose logs
+```
+
+- If you need to stop the application, run:
+
+```sh
+docker-compose down
+```
