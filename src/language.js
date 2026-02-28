@@ -115,17 +115,17 @@ export default
         ]
     },
     FR : {
-        COLORS : ['noir', 'blanc', 'bleu', 'rouge', 'jaune', 'orange', 'vert', 'violet'],
+        COLORS : ['noir', 'blanc', 'bleu', 'rouge', 'jaune', 'orange', 'vert', 'mauve'],
         SHAPES : ["carré", "triangle", "rectangle", "cercle"],
         QUESTIONS : [
             "Couleur de l'arrière plan",
-            "couleur d'arrière-plan du texte",
-            "couleur de fond du texte de la forme",
+            "couleur du texte de la couleur",
+            "couleur du texte de la forme",
             'couleur du nombre',
             'couleur de la forme',
-            'texte en couleur',
-            'texte de forme',
-            'façonner'
+            'texte de la couleur',
+            'texte de la forme',
+            'forme'
         ],
         MISC : [
             'ET',
